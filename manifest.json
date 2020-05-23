@@ -1,0 +1,34 @@
+{
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icons/devs-united-logo.png",
+    "32": "icons/devs-united-logo.png",
+    "48": "icons/devs-united-logo.png",
+    "128": "icons/devs-united-logo.png"
+  },
+  "default_locale": "pt_BR",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "options_page": "src/options_custom/index.html",
+  "browser_action": {
+    "default_icon": "icons/devs-united-logo.png",
+    "default_title": "__MSG_extensionName__",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "contextMenus"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
