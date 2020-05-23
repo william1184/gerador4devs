@@ -31,9 +31,7 @@ import UTILS from '../../js/utils.js';
 let isMasked = true;
 
 const changeIsMasked = ( parameterReceived ) =>{
-  console.log("Parametro antes: " + parameterReceived);
   isMasked = !parameterReceived;
-  console.log("Parametro depois: " + isMasked);
 };
 
 chrome.runtime.onInstalled.addListener(function () {
